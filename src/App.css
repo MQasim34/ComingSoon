@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Red+Hat+Display:wght@300;400;500;600;700;800&display=swap');
+
+
+::selection {
+    color: #ffffff;
+    background-color: #00bd1c;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+CosButton {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+
+}
+
+/* comingSoon CSS */
+.csMain {
+    background-image: linear-gradient(rgba(48, 38, 38, 0.37), rgba(71, 59, 59, 0.336)), url(./assets/comingSoon.jpg);
+    width: 100%;
+    height: 100vh;
+    /* padding: 0 15px; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.csMain .cs_logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: linear-gradient(rgba(48, 38, 38, 0.37), rgba(71, 59, 59, 0.336));
+    backdrop-filter: blur(3px);
+}
+
+.csMain .cs_logo h1 {
+    font-size: 26px;
+    color: #000;
+}
+
+@media only screen and (max-width:360px) {
+    .csMain .cs_logo h1 {
+        font-size: 20px;
+    }
+}
+
+
+.csMain .coming_soon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 45px;
+}
+
+.csMain .coming_soon .cs_outer {
+    max-width: 900px;
+    width: 96%;
+    height: 500px;
+    /* margin: 0 13px; */
+    background: linear-gradient(rgba(48, 38, 38, 0.37), rgba(71, 59, 59, 0.336));
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.csMain .coming_soon .cs_outer h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #000;
+    text-transform: capitalize;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.csMain .coming_soon .cs_outer p {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: #000;
+    margin: 0;
+}
+
+/*countDown Timer*/
+.coutdown_container {
+    margin-top: 45px;
+}
+
+.coutdown_container .outer_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+}
+
+.coutdown_container .outer_div .countdown_inner {
+    background-color: #ffffff2c;
+    padding: 20px 0px 0;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    position: relative;
+}
+
+.coutdown_container .outer_div .countdown_inner .forNumber {
+    z-index: 1;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    user-select: none;
+}
+
+.coutdown_container .outer_div .countdown_inner .forletters {
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #656565;
+    background-color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    padding: 10px 0px;
+    z-index: 0;
+    user-select: none;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 540px) {
+    .coutdown_container .outer_div .countdown_inner {
+        height: auto;
+    }
+}
+
+
+@media only screen and (max-width: 428px) {
+    .csMain .coming_soon .cs_outer {
+        height: auto;
+    }
+
+    .coutdown_container .outer_div {
+        gap: 10px;
+    }
+
+    .coutdown_container .outer_div .countdown_inner {
+        width: 100%;
+        height: 100%;
+        padding: 7px 0 0 0;
+    }
+
+    .coutdown_container .outer_div .countdown_inner .forNumber {
+        font-size: 26px;
+    }
+
+    .coutdown_container .outer_div .countdown_inner .forletters {
+        font-size: 14px;
+        padding: 6px 0;
+    }
+
+    .coutdown_container {
+        margin-top: 25px;
+    }
+}
