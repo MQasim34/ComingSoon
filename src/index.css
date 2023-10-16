@@ -138,3 +138,7 @@ FormGroup FormControlLabel label {
 .css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label {
   font-size: 14px;
 }
+
+.navHidden {
+  display: none;
+}

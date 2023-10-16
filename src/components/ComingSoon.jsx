@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Text from "./Text";
 import CountDown from "./CountDown";
 import CosButton from "./common/CosButton";
@@ -6,25 +6,32 @@ import { Box, Stack } from "@mui/material";
 import SignUpform from "./forms/SignUpform";
 import Overlay from "./common/Overlay";
 import { motion, AnimatePresence } from "framer-motion";
+import NavBar from "./NavigationBars/NavBar";
 
 const ComingSoon = () => {
-  const [IsSignUp, setIsSignUp] = useState(false);
-  const handleSignUpform = () => {
-    setIsSignUp(!IsSignUp);
-  };
+  //  change title dynamically
 
-  const closeSignUp = () => {
-    setIsSignUp(false);
-  };
+  useEffect(() => {
+    document.title = "Coming soon";
+  }, []);
 
-  const overlyClose = () => {
-    setIsSignUp(false);
-  };
+  // const [IsSignUp, setIsSignUp] = useState(false);
+  // const handleSignUpform = () => {
+  //   setIsSignUp(!IsSignUp);
+  // };
+
+  // const closeSignUp = () => {
+  //   setIsSignUp(false);
+  // };
+
+  // const overlyClose = () => {
+  //   setIsSignUp(false);
+  // };
 
   return (
     <div className="forOverflow">
       <div className="csMain">
-        <div className="cs_logo">
+        {/* <div className="cs_logo">
           <h1>
             <Text text="QASIM." />
           </h1>
@@ -48,7 +55,8 @@ const ComingSoon = () => {
               </Box>
             </Stack>
           </div>
-        </div>
+        </div> */}
+        {/* <NavBar handleSignUpform={handleSignUpform} /> */}
         <div className="coming_soon">
           <div className="cs_outer">
             <h1>
@@ -64,11 +72,11 @@ const ComingSoon = () => {
           </div>
         </div>
       </div>
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {IsSignUp && <SignUpform closeSignUp={closeSignUp} />}
       </AnimatePresence>
 
-      {IsSignUp === true ? <Overlay closeOverlayPorp={overlyClose} /> : null}
+      {IsSignUp === true ? <Overlay closeOverlayPorp={overlyClose} /> : null} */}
     </div>
   );
 };

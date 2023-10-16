@@ -24,13 +24,13 @@ import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined
 const signUpformvariant = {
   hidden: {
     opacity: 0,
-    scale: 4,
-    rotate: -360,
+    x: 400,
+    scale: 0,
   },
   show: {
     opacity: 1,
     scale: 1,
-    rotate: 0,
+    x: 0,
 
     transition: {
       type: "spring",
@@ -40,8 +40,8 @@ const signUpformvariant = {
   },
   exit: {
     opacity: 0,
-    scale: 4,
-    rotate: 360,
+    scale: 0,
+    x: -400,
   },
 };
 
